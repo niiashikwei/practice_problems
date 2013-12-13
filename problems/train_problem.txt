@@ -1,0 +1,41 @@
+TRAINS 
+  
+Problem:  The local commuter railroad services a number of towns in Kiwiland.  Because of monetary concerns, all of the tracks are 'one-way.'  That is, a route from Kaitaia to Invercargill does not imply the existence of a route from Invercargill to Kaitaia.  In fact, even if both of these routes do happen to exist, they are distinct and are not necessarily the same distance! 
+
+The purpose of this problem is to help the railroad provide its customers with information about the routes.  In particular, you will compute the distance along a certain route, the number of different routes between two towns, and the shortest route between two towns. 
+
+input:  a directed graph where a node represents a town and an edge represents a route between two towns.  the weighting of the edge represents the distance between the two towns.  a given route will never appear more than once, and for a given route, the starting and ending town will not be the same town. 
+
+output: for test input 1 through 5, if no such route exists, output 'no such route'.  otherwise, follow the route as given; do not make any extra stops!  for example, the first problem means to start at city a, then travel directly to city b (a distance of 5), then directly to city c (a distance of 4). 
+
+1. the distance of the route a-b-c. 
+2. the distance of the route a-d. 
+3. the distance of the route a-d-c. 
+4. the distance of the route a-e-b-c-d. 
+5. the distance of the route a-e-d. 
+6. the number of trips starting at c and ending at c with a maximum of 3 stops.  in the sample data below, there are two such trips: c-d-c (2 stops). and c-e-b-c (3 stops). 
+7. the number of trips starting at a and ending at c with exactly 4 stops.  in the sample data below, there are three such trips: a to c (via b,c,d); a to c (via d,c,d); and a to c (via d,e,b). 
+8. the length of the shortest route (in terms of distance to travel) from a to c. 
+9. the length of the shortest route (in terms of distance to travel) from b to b. 
+10. the number of different routes from c to c with a distance of less than 30.  in the sample data, the trips are: cdc, cebc, cebcdc, cdcebc, cdebc, cebcebc, cebcebcebc. 
+            
+test input: 
+
+for the test input, the towns are named using the first few letters of the alphabet from a to e.  a route between two towns (a to b) with a distance of 5 is represented as ab5. 
+
+graph: ab5, bc4, cd8, dc8, de6, ad5, ce2, eb3, ae7 
+
+expected output: 
+
+output #1: 9 
+output #2: 5 
+output #3: 13 
+output #4: 22 
+output #5: no such route 
+output #6: 2 
+output #7: 3 
+output #8: 9 
+output #9: 9 
+output #10: 7 
+ ========== 
+
