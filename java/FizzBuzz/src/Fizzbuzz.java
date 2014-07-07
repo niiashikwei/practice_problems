@@ -1,18 +1,25 @@
 import java.io.PrintStream;
 
 public class Fizzbuzz {
+    PrintStream printStream;
 
     public static void main(String args[]){
-        fizzBuzz();
+        Fizzbuzz fizzbuzz = new Fizzbuzz(System.out);
+        fizzbuzz.printNumbersUpTo(100);
     }
 
-    protected static void fizzBuzz() {
-        for (int i = 1; i < 101; i++){
-            fizzBuzzInterpreter(i, System.out);
+    public Fizzbuzz(PrintStream printStream){
+        this.printStream = printStream;
+    }
+
+    protected void printNumbersUpTo(int maximumNumber) {
+        int startingNumber = 1;
+        for (int i = startingNumber; i <= maximumNumber; i++){
+            fizzBuzzInterpreter(i);
         }
     }
 
-    protected static void fizzBuzzInterpreter(Integer numberToPrint, PrintStream printStream) {
+    protected void fizzBuzzInterpreter(Integer numberToPrint) {
         boolean isMultipleOfFive = numberToPrint % 5 == 0;
         boolean isMultipleOfThree = numberToPrint % 3 == 0;
 

@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df8906db-67a2-48c2-a6ff-09acdd1b5321" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_mockito_mockito_core_1_9_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FizzBuzz.iml" afterPath="$PROJECT_DIR$/FizzBuzz.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/FizzBuzzTest.java" afterPath="$PROJECT_DIR$/test/FizzBuzzTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fizzbuzz.java" afterPath="$PROJECT_DIR$/src/Fizzbuzz.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FizzBuzz.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404573123204" ignored="false" />
-    <file path="/FizzBuzzTest.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404691796330" ignored="false" />
+    <file path="/Dummy.txt" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404704641448" ignored="false" />
+    <file path="/FizzBuzzTest.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404704556850" ignored="false" />
     <file path="/fragment.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404480225458" ignored="false" />
-    <file path="/Fizzbuzz.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404691853043" ignored="false" />
+    <file path="/Fizzbuzz.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404704417672" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <file leaf-file-name="FizzBuzzTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/FizzBuzzTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="6" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
+            <state line="19" column="7" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,7 +95,7 @@
       <file leaf-file-name="Fizzbuzz.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Fizzbuzz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.074257426">
+            <state line="7" column="39" selection-start="220" selection-end="220" vertical-scroll-proportion="0.1446281">
               <folding />
             </state>
           </provider>
@@ -686,10 +684,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfThree" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Fizzbuzz" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzBuzzIfMultipleOfThreeAndFive" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfMultipleOfThree" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfMultipleOfThree" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfThree" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Fizzbuzz" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzBuzzIfMultipleOfThreeAndFive" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -727,7 +725,7 @@
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -745,8 +743,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.5729443" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42705572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42705572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -851,7 +849,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/FizzBuzzTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="6" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
+        <state line="19" column="7" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -860,7 +858,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Fizzbuzz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.074257426">
+        <state line="7" column="39" selection-start="220" selection-end="220" vertical-scroll-proportion="0.1446281">
           <folding />
         </state>
       </provider>
