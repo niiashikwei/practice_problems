@@ -3,31 +3,29 @@ import java.io.PrintStream;
 public class Fizzbuzz {
 
     public static void main(String args[]){
-        fizzBuzz(System.out);
+        fizzBuzz();
     }
 
-    protected static void fizzBuzz(PrintStream printStream) {
+    protected static void fizzBuzz() {
         for (int i = 1; i < 101; i++){
-            printStream.printf("%s \n", fizzBuzzInterpreter(i));
+            fizzBuzzInterpreter(i, System.out);
         }
     }
 
-    protected static String fizzBuzzInterpreter(Integer numberToPrint) {
+    protected static void fizzBuzzInterpreter(Integer numberToPrint, PrintStream printStream) {
         boolean isMultipleOfFive = numberToPrint % 5 == 0;
         boolean isMultipleOfThree = numberToPrint % 3 == 0;
 
-        if (isMultipleOfFive && isMultipleOfThree){
-            return "FizzBuzz";
-        }
-
         if (isMultipleOfThree){
-            return "Fizz";
+            printStream.print("Fizz");
         }
 
         if (isMultipleOfFive){
-            return "Buzz";
+            printStream.print("Buzz");
+        }else{
+            printStream.print(numberToPrint);
         }
 
-        return numberToPrint.toString();
+        printStream.println();
     }
 }

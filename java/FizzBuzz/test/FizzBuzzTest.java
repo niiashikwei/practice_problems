@@ -1,41 +1,61 @@
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 
-import static org.junit.Assert.assertEquals;
+import java.io.PrintStream;
+
+import static org.mockito.Mockito.verify;
+import static org.mockito.MockitoAnnotations.initMocks;
 
 public class FizzBuzzTest {
+    @Mock
+    PrintStream mockPrintStream;
+
+    @Before
+    public void setUp(){
+        initMocks(this);
+    }
+
     @Test
     public void shouldPrintFizzIfThree(){
         int number = 3;
-        assertEquals("Fizz", Fizzbuzz.fizzBuzzInterpreter(number));
+        Fizzbuzz.fizzBuzzInterpreter(number, mockPrintStream);
+        verify(mockPrintStream).print("Fizz");
     }
 
     @Test
     public void shouldPrintFizzIfMultipleOfThree(){
         int multipleOfThree = 9;
-        assertEquals("Fizz", Fizzbuzz.fizzBuzzInterpreter(multipleOfThree));
+        Fizzbuzz.fizzBuzzInterpreter(multipleOfThree, mockPrintStream);
+        verify(mockPrintStream).print("Fizz");
     }
 
     @Test
     public void shouldPrintBuzzIfFive(){
         int number = 5;
-        assertEquals("Buzz", Fizzbuzz.fizzBuzzInterpreter(number));
+        Fizzbuzz.fizzBuzzInterpreter(number, mockPrintStream);
+        verify(mockPrintStream).print("Buzz");
     }
 
     @Test
     public void shouldPrintBuzzIfMultipleOfFive(){
         int multipleOfFive = 20;
-        assertEquals("Buzz", Fizzbuzz.fizzBuzzInterpreter(multipleOfFive));
+        Fizzbuzz.fizzBuzzInterpreter(multipleOfFive, mockPrintStream);
+        verify(mockPrintStream).print("Buzz");
     }
 
     @Test
     public void shouldPrintNumberIfNotThreeOrFive(){
-        int number = 2;
-        assertEquals("2", Fizzbuzz.fizzBuzzInterpreter(number));
+        Integer number = 2;
+        Fizzbuzz.fizzBuzzInterpreter(number, mockPrintStream);
+        verify(mockPrintStream).print(number);
     }
 
     @Test
     public void shouldPrintFizzBuzzIfMultipleOfThreeAndFive(){
         int number = 15;
-        assertEquals("FizzBuzz", Fizzbuzz.fizzBuzzInterpreter(number));
+        Fizzbuzz.fizzBuzzInterpreter(number, mockPrintStream);
+        verify(mockPrintStream).print("Fizz");
+        verify(mockPrintStream).print("Buzz");
     }
 }

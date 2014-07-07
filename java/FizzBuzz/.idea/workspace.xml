@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df8906db-67a2-48c2-a6ff-09acdd1b5321" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_mockito_mockito_core_1_9_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FizzBuzz.iml" afterPath="$PROJECT_DIR$/FizzBuzz.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/FizzBuzzTest.java" afterPath="$PROJECT_DIR$/test/FizzBuzzTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fizzbuzz.java" afterPath="$PROJECT_DIR$/src/Fizzbuzz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FizzBuzz.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404573123204" ignored="false" />
-    <file path="/FizzBuzzTest.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404688305183" ignored="false" />
+    <file path="/FizzBuzzTest.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404691796330" ignored="false" />
     <file path="/fragment.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404480225458" ignored="false" />
-    <file path="/Fizzbuzz.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404689400669" ignored="false" />
+    <file path="/Fizzbuzz.java" changelist="df8906db-67a2-48c2-a6ff-09acdd1b5321" time="1404691853043" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +86,7 @@
       <file leaf-file-name="FizzBuzzTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/FizzBuzzTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0">
+            <state line="60" column="6" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +97,7 @@
       <file leaf-file-name="Fizzbuzz.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Fizzbuzz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="165" selection-end="165" vertical-scroll-proportion="0.25052193">
+            <state line="2" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.074257426">
               <folding />
             </state>
           </provider>
@@ -369,8 +373,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/test/FizzBuzzTest.java" />
         <option value="$PROJECT_DIR$/src/Fizzbuzz.java" />
+        <option value="$PROJECT_DIR$/test/FizzBuzzTest.java" />
       </list>
     </option>
   </component>
@@ -447,18 +451,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
@@ -468,7 +475,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Fizzbuzz">
+  <component name="RunManager" selected="JUnit.FizzBuzzTest">
     <configuration default="false" name="FizzBuzzTest.shouldPrintFizzIfThree" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="FizzBuzz" />
@@ -678,11 +685,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Fizzbuzz" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzBuzzIfMultipleOfThreeAndFive" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfMultipleOfThree" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfThree" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfThree" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Fizzbuzz" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzBuzzIfMultipleOfThreeAndFive" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FizzBuzzTest.shouldPrintFizzIfMultipleOfThree" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -731,15 +738,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.67241377" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3275862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.5729443" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42705572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -844,7 +851,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/FizzBuzzTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0">
+        <state line="60" column="6" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -853,7 +860,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Fizzbuzz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="165" selection-end="165" vertical-scroll-proportion="0.25052193">
+        <state line="2" column="18" selection-start="47" selection-end="47" vertical-scroll-proportion="0.074257426">
           <folding />
         </state>
       </provider>
@@ -936,6 +943,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>org.mockito:mockito-core:1.9.5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

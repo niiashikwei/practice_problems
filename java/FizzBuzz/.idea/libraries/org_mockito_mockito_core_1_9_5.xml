@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="org.mockito:mockito-core:1.9.5" type="repository">
+    <properties maven-id="org.mockito:mockito-core:1.9.5" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/mockito-core-1.9.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hamcrest-core-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/objenesis-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
