@@ -1,6 +1,13 @@
 class Fizzbuzz
   def self.interpreter(number)
-    return 'Fizz' if number % 3 == 0
-    return 'Buzz' if number % 5 == 0
+    isMultipleOf3 = number % 3 == 0
+    isMultipleOf5 = number % 5 == 0
+
+    result = ''
+    result = 'Fizz' if isMultipleOf3
+    result += 'Buzz' if isMultipleOf5
+    result = number unless result.length > 0
+
+    return result
   end
 end

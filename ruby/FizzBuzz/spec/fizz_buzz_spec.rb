@@ -13,4 +13,12 @@ describe Fizzbuzz do
   it 'prints Buzz when interating over a multiple of 5' do
     Fizzbuzz.interpreter(20).should be_eql('Buzz')
   end
+
+  it 'prints the number if it is not a multiple of 3 or 5' do
+    Fizzbuzz.interpreter(17).should be_eql(17)
+  end
+
+  it 'prints the FizzBuzz if the number is a multiple of both 3 and 5' do
+    Fizzbuzz.interpreter(15).should be_eql('FizzBuzz')
+  end
 end
