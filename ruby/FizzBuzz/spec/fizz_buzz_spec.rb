@@ -21,4 +21,9 @@ describe Fizzbuzz do
   it 'prints the FizzBuzz if the number is a multiple of both 3 and 5' do
     Fizzbuzz.interpreter(15).should be_eql('FizzBuzz')
   end
+
+  it 'print from 1 - 100 according to FizzBuzz requirements' do
+    Fizzbuzz.should_receive(:interpreter).exactly(100).times
+    Fizzbuzz.fizzbuzz
+  end
 end

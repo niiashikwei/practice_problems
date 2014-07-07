@@ -1,13 +1,16 @@
 class Fizzbuzz
   def self.interpreter(number)
-    isMultipleOf3 = number % 3 == 0
-    isMultipleOf5 = number % 5 == 0
+    is_multiple_of_3 = number % 3 == 0
+    is_multiple_of_5 = number % 5 == 0
 
     result = ''
-    result = 'Fizz' if isMultipleOf3
-    result += 'Buzz' if isMultipleOf5
-    result = number unless result.length > 0
+    result = 'Fizz' if is_multiple_of_3
+    result += 'Buzz' if is_multiple_of_5
 
-    return result
+    result.length > 0 ? result : number
+  end
+
+  def self.fizzbuzz
+    (1..100).each { |number| puts interpreter(number) }
   end
 end
