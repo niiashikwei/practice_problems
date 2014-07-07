@@ -9,4 +9,8 @@ describe Fizzbuzz do
   it 'prints Fizz when iterating over a multiple of 3' do
     Fizzbuzz.interpreter(9).should be_eql('Fizz')
   end
+
+  it 'prints Buzz when interating over a multiple of 5' do
+    Fizzbuzz.interpreter(20).should be_eql('Buzz')
+  end
 end
