@@ -19,42 +19,49 @@ public class PrimeFactorsKata {
     List<Integer> expectedResult;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         expectedResult = new ArrayList<Integer>();
     }
 
     @Test
-    public void shouldGetPrimeFactorsForZero(){
+    public void shouldGetPrimeFactorsForZero() {
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(0));
     }
 
     @Test
-    public void shouldGetPrimeFactorsForOne(){
+    public void shouldGetPrimeFactorsForOne() {
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(1));
     }
 
     @Test
-    public void shouldGetPrimeFactorsForTwo(){
+    public void shouldGetPrimeFactorsForTwo() {
         expectedResult.add(2);
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(2));
     }
 
     @Test
-    public void shouldGetPrimeFactorsForThree(){
+    public void shouldGetPrimeFactorsForThree() {
         expectedResult.add(3);
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(3));
     }
 
     @Test
-    public void shouldGetPrimeFactorsForFour(){
+    public void shouldGetPrimeFactorsForFour() {
         expectedResult.add(2);
         expectedResult.add(2);
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(4));
     }
 
     @Test
-    public void shouldGetPrimeFactorForFive(){
+    public void shouldGetPrimeFactorsForFive() {
         expectedResult.add(5);
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(5));
+    }
+
+    @Test
+    public void shouldGetPrimeFactorsForSix() {
+        expectedResult.add(2);
+        expectedResult.add(3);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(6));
     }
 }

@@ -8,11 +8,9 @@ public class PrimeFactors {
         if(number > 1){
             if (number == 2 || number == 3 || number == 5){
                 result.add(number);
-            }
-
-            if (number == 4){
+            }else if (number % 2 == 0){
                 result.add(2);
-                result.add(2);
+                result.add(number/2);
             }
         }
 
