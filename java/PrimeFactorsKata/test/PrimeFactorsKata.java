@@ -51,4 +51,10 @@ public class PrimeFactorsKata {
         expectedResult.add(2);
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(4));
     }
+
+    @Test
+    public void shouldGetPrimeFactorForFive(){
+        expectedResult.add(5);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(5));
+    }
 }
