@@ -64,4 +64,32 @@ public class PrimeFactorsKata {
         expectedResult.add(3);
         assertEquals(expectedResult, PrimeFactors.getPrimeFactors(6));
     }
+
+    @Test
+    public void shouldGetPrimeFactorsForSeven() {
+        expectedResult.add(7);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(7));
+    }
+
+    @Test
+    public void shouldGetPrimeFactorsForEight() {
+        expectedResult.add(2);
+        expectedResult.add(2);
+        expectedResult.add(2);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(8));
+    }
+
+    @Test
+    public void shouldGetPrimeFactorsForNine() {
+        expectedResult.add(3);
+        expectedResult.add(3);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(9));
+    }
+
+    @Test
+    public void shouldGetPrimeFactorsForFifteen(){
+        expectedResult.add(3);
+        expectedResult.add(5);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(15));
+    }
 }
