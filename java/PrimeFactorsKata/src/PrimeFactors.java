@@ -1,14 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrimeFactors {
-    protected static int[] getPrimeFactors(int number){
+    protected static List<Integer> getPrimeFactors(int number){
+        List<Integer> result = new ArrayList<Integer>();
         if (number == 2 || number == 3){
-            return new int[]{number};
+            result.add(number);
         }
 
         if (number == 4){
-            return new int[]{2,2};
+            result.add(2);
+            result.add(2);
         }
 
-        return new int[]{};
+        return result;
     }
 }

@@ -1,6 +1,10 @@
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertArrayEquals;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 //
 //0 = []
@@ -12,33 +16,39 @@ import static org.junit.Assert.assertArrayEquals;
 // remove prime numbers that dont divide exactly
 
 public class PrimeFactorsKata {
+    List<Integer> expectedResult;
+
+    @Before
+    public void setUp(){
+        expectedResult = new ArrayList<Integer>();
+    }
+
     @Test
     public void shouldGetPrimeFactorsForZero(){
-        int[] expectedResult = new int[]{};
-        assertArrayEquals(expectedResult, PrimeFactors.getPrimeFactors(0));
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(0));
     }
 
     @Test
     public void shouldGetPrimeFactorsForOne(){
-        int[] expectedResult = new int[]{};
-        assertArrayEquals(expectedResult, PrimeFactors.getPrimeFactors(1));
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(1));
     }
 
     @Test
     public void shouldGetPrimeFactorsForTwo(){
-        int[] expectedResult = new int[]{2};
-        assertArrayEquals(expectedResult, PrimeFactors.getPrimeFactors(2));
+        expectedResult.add(2);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(2));
     }
 
     @Test
     public void shouldGetPrimeFactorsForThree(){
-        int[] expectedResult = new int[]{3};
-        assertArrayEquals(expectedResult, PrimeFactors.getPrimeFactors(3));
+        expectedResult.add(3);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(3));
     }
 
     @Test
     public void shouldGetPrimeFactorsForFour(){
-        int[] expectedResult = new int[]{2,2};
-        assertArrayEquals(expectedResult, PrimeFactors.getPrimeFactors(4));
+        expectedResult.add(2);
+        expectedResult.add(2);
+        assertEquals(expectedResult, PrimeFactors.getPrimeFactors(4));
     }
 }
