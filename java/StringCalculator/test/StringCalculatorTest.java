@@ -1,11 +1,18 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class StringCalculatorTest {
+    StringCalculator stringCalculator;
+
+    @Before
+    public void setUp(){
+        stringCalculator = new StringCalculator();
+    }
+
     @Test
     public void shouldSumNoNumbers(){
-        StringCalculator stringCalculator = new StringCalculator();
         String inputString = "";
         int sum = stringCalculator.sum(inputString);
 
@@ -14,7 +21,6 @@ public class StringCalculatorTest {
 
     @Test
     public void shouldSumOneNumber(){
-        StringCalculator stringCalculator = new StringCalculator();
         String inputString = "1";
         int sum = stringCalculator.sum(inputString);
 
@@ -23,7 +29,6 @@ public class StringCalculatorTest {
 
     @Test
     public void shouldSumMultipleNumbers(){
-        StringCalculator stringCalculator = new StringCalculator();
         String inputString = "1, 4, 6, 10";
         int sum = stringCalculator.sum(inputString);
 
