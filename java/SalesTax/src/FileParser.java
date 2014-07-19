@@ -1,8 +1,10 @@
-import static java.lang.Character.*;
+import static java.lang.Integer.*;
 
 public class FileParser {
-    public static int parseLine(String inputLine) {
-        char firstCharacter = inputLine.charAt(0);
-        return getNumericValue(firstCharacter);
+    public static Item parseLine(String inputLine) {
+        String[] splitUpInput = inputLine.split(" ");
+        String itemName = splitUpInput[1];
+        String firstCharacter = splitUpInput[0];
+        return new Item(parseInt(firstCharacter), itemName);
     }
 }
