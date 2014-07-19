@@ -38,4 +38,13 @@ public class FileParserTest {
         double actualPrice = item.getPrice();
         assertEquals(expectedPrice, actualPrice, 0);
     }
+
+    @Test
+    public void shouldReadOneLineOfInputAndNameIfItsTwoWordsLong(){
+        String inputLine = "1 music CD at 14.99";
+        String expectedName = "music CD";
+        Item item = FileParser.parseLine(inputLine);
+        String actualName = item.getName();
+        assertEquals(expectedName, actualName);
+    }
 }
