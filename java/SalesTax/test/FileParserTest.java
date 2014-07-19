@@ -29,4 +29,13 @@ public class FileParserTest {
         double actualPrice = item.getPrice();
         assertEquals(expectedPrice, actualPrice, 0);
     }
+
+    @Test
+    public void shouldReadOneLineAndGetPriceIfItIsNotThirdItem(){
+        String inputLine = "1 music CD at 14.99";
+        double expectedPrice = 14.99;
+        Item item = FileParser.parseLine(inputLine);
+        double actualPrice = item.getPrice();
+        assertEquals(expectedPrice, actualPrice, 0);
+    }
 }
