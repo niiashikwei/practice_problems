@@ -1,18 +1,17 @@
-import com.google.common.base.Joiner;
-
-import java.util.ArrayList;
-
-import static com.google.common.collect.Lists.newArrayList;
-import static java.lang.Integer.parseInt;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FileParser {
     public static Item parseLine(String inputLine) {
-        ArrayList<String> splitUpInput = newArrayList(inputLine.split(" "));
-        String firstCharacter = splitUpInput.remove(0);
-        String lastToken = splitUpInput.remove(splitUpInput.size() - 1);
-        double itemPrice = Double.parseDouble(lastToken);
-        splitUpInput.remove(splitUpInput.size() - 1);
-        String itemName = Joiner.on(" ").join(splitUpInput);
-        return new Item(parseInt(firstCharacter), itemName, itemPrice);
+        String stringPattern = "(\\d+) (.*) at (\\d+.\\d{2})";
+        Pattern inputPattern = Pattern.compile(stringPattern);
+        Matcher matcher = inputPattern.matcher(inputLine);
+        if(matcher.matches()){
+            int itemQuantity = Integer.parseInt(matcher.group(1));
+            String itemName = matcher.group(2);
+            double itemPrice = Double.parseDouble(matcher.group(3));
+            return new Item(itemQuantity, itemName, itemPrice);
+        }
+        return null;
     }
 }
