@@ -11,61 +11,61 @@ import static org.mockito.Mockito.when;
 
 public class FileParserTest {
     @Test
-    public void shouldReadOneLineOfInputAndGetQuantityOfItem(){
-        String inputLine = "1 book at 12.49";
+    public void shouldReadOneLineOfInputAndGetQuantityOfInputLine(){
+        String inputString = "1 book at 12.49";
         int expectedQuantity = 1;
-        Item item = FileParser.parseLine(inputLine);
-        int actualQuantity = item.getQuantity();
+        InputLine inputLine = FileParser.parseLine(inputString);
+        int actualQuantity = inputLine.getQuantity();
         assertEquals(expectedQuantity, actualQuantity);
     }
 
     @Test
-    public void shouldReadOneLineOfInputAndGetItemName(){
-        String inputLine = "1 book at 12.49";
+    public void shouldReadOneLineOfInputAndGetInputLineName(){
+        String inputString = "1 book at 12.49";
         String expectedName = "book";
-        Item item = FileParser.parseLine(inputLine);
-        String actualName = item.getName();
+        InputLine inputLine = FileParser.parseLine(inputString);
+        String actualName = inputLine.getName();
         assertEquals(expectedName, actualName);
     }
 
     @Test
-    public void shouldReadOneLineOfInputAndGetItemPrice(){
-        String inputLine = "1 book at 12.49";
+    public void shouldReadOneLineOfInputAndGetInputLinePrice(){
+        String inputString = "1 book at 12.49";
         double expectedPrice = 12.49;
-        Item item = FileParser.parseLine(inputLine);
-        double actualPrice = item.getPrice();
+        InputLine inputLine = FileParser.parseLine(inputString);
+        double actualPrice = inputLine.getPrice();
         assertEquals(expectedPrice, actualPrice, 0);
     }
 
     @Test
-    public void shouldReadOneLineAndGetPriceIfItIsNotThirdItem(){
-        String inputLine = "1 music CD at 14.99";
+    public void shouldReadOneLineAndGetPriceIfItIsNotThirdInputLine(){
+        String inputString = "1 music CD at 14.99";
         double expectedPrice = 14.99;
-        Item item = FileParser.parseLine(inputLine);
-        double actualPrice = item.getPrice();
+        InputLine inputLine = FileParser.parseLine(inputString);
+        double actualPrice = inputLine.getPrice();
         assertEquals(expectedPrice, actualPrice, 0);
     }
 
     @Test
     public void shouldReadOneLineOfInputAndNameIfItsTwoWordsLong(){
-        String inputLine = "1 music CD at 14.99";
+        String inputString = "1 music CD at 14.99";
         String expectedName = "music CD";
-        Item item = FileParser.parseLine(inputLine);
-        String actualName = item.getName();
+        InputLine inputLine = FileParser.parseLine(inputString);
+        String actualName = inputLine.getName();
         assertEquals(expectedName, actualName);
     }
 
     @Test
-    public void shouldReadMultipleLinesAndCreateItems() throws IOException {
-        Item item1 = new Item(1, "book", 12.49);
-        Item item2 = new Item(1, "music CD", 14.99);
-        List<Item> expectedItems = newArrayList(item1, item2);
+    public void shouldReadMultipleLinesAndCreateInputLines() throws IOException {
+        InputLine inputLine1 = new InputLine(1, "book", 12.49);
+        InputLine inputLine2 = new InputLine(1, "music CD", 14.99);
+        List<InputLine> expectedInputLines = newArrayList(inputLine1, inputLine2);
 
         BufferedReader mockedBufferedReader = mock(BufferedReader.class);
         when(mockedBufferedReader.readLine()).thenReturn("1 book at 12.49", "1 music CD at 14.99", null);
-        List<Item> actualItems = FileParser.parseInput(mockedBufferedReader);
+        List<InputLine> actualInputLines = FileParser.parseInput(mockedBufferedReader);
 
-        assertEquals(expectedItems, actualItems);
+        assertEquals(expectedInputLines, actualInputLines);
     }
 
 }

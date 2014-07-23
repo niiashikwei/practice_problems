@@ -1,9 +1,9 @@
-public class Item {
+public class InputLine {
     private String name;
     private int quantity;
     private double price;
 
-    public Item(int quantity, String name, double itemPrice) {
+    public InputLine(int quantity, String name, double itemPrice) {
         this.quantity = quantity;
         this.name = name;
         this.price = itemPrice;
@@ -26,7 +26,7 @@ public class Item {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Item item = (Item) o;
+        InputLine item = (InputLine) o;
 
         if (Double.compare(item.price, price) != 0) return false;
         if (quantity != item.quantity) return false;

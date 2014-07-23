@@ -8,7 +8,7 @@ import static com.google.common.collect.Lists.newArrayList;
 
 public class FileParser {
 
-    public static Item parseLine(String inputLine) {
+    public static InputLine parseLine(String inputLine) {
         String stringPattern = "(\\d+) (.*) at (\\d+.\\d{2})";
         Pattern inputPattern = Pattern.compile(stringPattern);
         Matcher matcher = inputPattern.matcher(inputLine);
@@ -16,16 +16,16 @@ public class FileParser {
             int itemQuantity = Integer.parseInt(matcher.group(1));
             String itemName = matcher.group(2);
             double itemPrice = Double.parseDouble(matcher.group(3));
-            return new Item(itemQuantity, itemName, itemPrice);
+            return new InputLine(itemQuantity, itemName, itemPrice);
         }
         return null;
     }
 
-    public static List<Item> parseInput(BufferedReader bufferedReader) throws IOException {
-        List<Item> items = newArrayList();
+    public static List<InputLine> parseInput(BufferedReader bufferedReader) throws IOException {
+        List<InputLine> items = newArrayList();
         String currentLine = bufferedReader.readLine();
         while(currentLine != null){
-            Item item = parseLine(currentLine);
+            InputLine item = parseLine(currentLine);
             items.add(item);
             currentLine = bufferedReader.readLine();
         }
