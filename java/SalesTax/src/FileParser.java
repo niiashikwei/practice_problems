@@ -1,7 +1,13 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.google.common.collect.Lists.newArrayList;
+
 public class FileParser {
+
     public static Item parseLine(String inputLine) {
         String stringPattern = "(\\d+) (.*) at (\\d+.\\d{2})";
         Pattern inputPattern = Pattern.compile(stringPattern);
@@ -14,4 +20,17 @@ public class FileParser {
         }
         return null;
     }
+
+    public static List<Item> parseInput(BufferedReader bufferedReader) throws IOException {
+        List<Item> items = newArrayList();
+        String currentLine = bufferedReader.readLine();
+        while(currentLine != null){
+            Item item = parseLine(currentLine);
+            items.add(item);
+            currentLine = bufferedReader.readLine();
+        }
+        return items;
+    }
+
+
 }
