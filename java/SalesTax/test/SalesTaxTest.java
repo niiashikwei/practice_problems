@@ -49,4 +49,36 @@ public class SalesTaxTest {
         assertEquals(expectedImportDuty, actualImportDuty, 0);
     }
 
+    @Test
+    public void shouldCalculateTheTotalSalesTaxForALocalItem(){
+        InputLine inputLine = new InputLine(1, "hat", 100.00);
+        double expectedTotalSalesTax = 10.0;
+        double actualTotalSalesTax = salesTax.getTotalSalesTax(inputLine);
+        assertEquals(expectedTotalSalesTax, actualTotalSalesTax, 0);
+    }
+
+    @Test
+    public void shouldCalculateTheTotalSalesTaxForAnImportedItem(){
+        InputLine inputLine = new InputLine(1, "imported bottle of perfume", 100.00);
+        double expectedTotalSalesTax = 15.0;
+        double actualTotalSalesTax = salesTax.getTotalSalesTax(inputLine);
+        assertEquals(expectedTotalSalesTax, actualTotalSalesTax, 0);
+    }
+
+    @Test
+    public void shouldCalculateTheTotalSalesTaxForAnExemptImportedItem(){
+        InputLine inputLine = new InputLine(1, "imported box of chocolates", 100.00);
+        double expectedTotalSalesTax = 5.0;
+        double actualTotalSalesTax = salesTax.getTotalSalesTax(inputLine);
+        assertEquals(expectedTotalSalesTax, actualTotalSalesTax, 0);
+    }
+
+    @Test
+    public void shouldCalculateTheTotalSalesTaxForAnExemptLocalItemAsZero(){
+        InputLine inputLine = new InputLine(1, "packet of headache pills", 100.00);
+        double expectedTotalSalesTax = 0.0;
+        double actualTotalSalesTax = salesTax.getTotalSalesTax(inputLine);
+        assertEquals(expectedTotalSalesTax, actualTotalSalesTax, 0);
+    }
+
 }

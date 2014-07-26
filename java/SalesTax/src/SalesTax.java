@@ -12,10 +12,12 @@ public class SalesTax {
     }
 
     public double getBasicSalesTax(InputLine inputLine){
-        if (!exemptGoods.contains(inputLine.getName())){
-            return basicSalesTax * inputLine.getPrice();
+        for (String exemptGood : exemptGoods){
+            if(inputLine.getName().contains(exemptGood)){
+                return 0.0;
+            }
         }
-        return 0.0;
+        return basicSalesTax * inputLine.getPrice();
     }
 
     public double getImportDuty(InputLine inputLine) {
@@ -23,5 +25,17 @@ public class SalesTax {
             return importTax * inputLine.getPrice();
         }
         return 0.0;
+    }
+
+    public double getTotalSalesTax(InputLine inputLine) {
+        return getBasicSalesTax(inputLine) + getImportDuty(inputLine);
+    }
+
+    public double getTotalSalesTax(List<InputLine> items) {
+        double salesTax = 0;
+        for (InputLine item : items){
+            salesTax += getTotalSalesTax(item);
+        }
+        return salesTax;
     }
 }
