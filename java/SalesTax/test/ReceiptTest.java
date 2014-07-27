@@ -22,12 +22,12 @@ public class ReceiptTest {
         Receipt actualReceipt = new Receipt(items, salesTax);
 
         StringBuilder stringBuilder = new StringBuilder();
-        String expectedStringReceipt = stringBuilder.append("Output:\n")
-                                                    .append("1 hat: 100.00\n")
+        String expectedStringReceipt = stringBuilder.append("Output: 1\n")
+                                                    .append("1 hat: 110.00\n")
                                                     .append("Sales Taxes: 10.00\n")
-                                                    .append("Total: 110.00")
+                                                    .append("Total: 110.00\n\n")
                                                     .toString();
 
-        assertEquals(expectedStringReceipt, actualReceipt.buildReceipt());
+        assertEquals(expectedStringReceipt, actualReceipt.buildReceipt(0));
     }
 }

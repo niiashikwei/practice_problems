@@ -24,12 +24,13 @@ public class SalesTaxApp {
 
     private void printOutput(){
         try {
-            for (String filepath : filePaths){
-                BufferedReader bufferedReader = new BufferedReader(new FileReader(filepath));
+            for (int i = 0; i < filePaths.length; i++){
+                BufferedReader bufferedReader = new BufferedReader(new FileReader(filePaths[i]));
                 List<InputLine> inputLines = FileParser.parseInput(bufferedReader);
                 Receipt receipt = new Receipt(inputLines, salesTax);
-                printStream.print(receipt.buildReceipt());
+                printStream.print(receipt.buildReceipt(i));
             }
+            printStream.print("==========");
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -9,15 +9,14 @@ public class Receipt {
         this.salesTax = salesTax;
     }
 
-    public String buildReceipt() {
+    public String buildReceipt(int i) {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Output:")
-                     .append("\n");
+        stringBuilder.append(String.format("Output: %s\n", i+1));
         for(InputLine item : items){
             stringBuilder.append(String.format("%s %s: %.2f\n", item.getQuantity(), item.getName(), salesTax.getPriceWithTax(item)));
         }
         stringBuilder.append(String.format("Sales Taxes: %.2f\n", getSalesTaxTotal()))
-                     .append(String.format("Total: %.2f", getPricesTotal() + getSalesTaxTotal()));
+                     .append(String.format("Total: %.2f\n\n", getPricesTotal() + getSalesTaxTotal()));
 
         return stringBuilder.toString();
     }
