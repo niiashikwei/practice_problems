@@ -81,4 +81,12 @@ public class SalesTaxTest {
         assertEquals(expectedTotalSalesTax, actualTotalSalesTax, 0);
     }
 
+    @Test
+    public void shouldCalculatePriceAfterTaxIsApplied(){
+        InputLine inputLine = new InputLine(1, "hat", 100.00);
+        double expectedPriceWithTax = 110.0;
+        double actualPriceWithTax = salesTax.getPriceWithTax(inputLine);
+        assertEquals(expectedPriceWithTax, actualPriceWithTax, 0);
+    }
+
 }

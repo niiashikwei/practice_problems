@@ -14,7 +14,7 @@ public class Receipt {
         stringBuilder.append("Output:")
                      .append("\n");
         for(InputLine item : items){
-            stringBuilder.append(String.format("%s %s: %.2f\n", item.getQuantity(), item.getName(), item.getPrice()));
+            stringBuilder.append(String.format("%s %s: %.2f\n", item.getQuantity(), item.getName(), salesTax.getPriceWithTax(item)));
         }
         stringBuilder.append(String.format("Sales Taxes: %.2f\n", getSalesTaxTotal()))
                      .append(String.format("Total: %.2f", getPricesTotal() + getSalesTaxTotal()));

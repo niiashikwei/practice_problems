@@ -38,4 +38,8 @@ public class SalesTax {
         }
         return salesTax;
     }
+
+    public double getPriceWithTax(InputLine item) {
+        return item.getPrice() + getTotalSalesTax(item);
+    }
 }

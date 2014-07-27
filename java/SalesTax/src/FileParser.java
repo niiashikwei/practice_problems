@@ -25,8 +25,10 @@ public class FileParser {
         List<InputLine> items = newArrayList();
         String currentLine = bufferedReader.readLine();
         while(currentLine != null){
-            InputLine item = parseLine(currentLine);
-            items.add(item);
+            if(!currentLine.contains("Input")){
+                InputLine item = parseLine(currentLine);
+                items.add(item);
+            }
             currentLine = bufferedReader.readLine();
         }
         return items;
