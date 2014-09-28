@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,7 +16,7 @@ public class FileParser {
         if(matcher.matches()){
             int itemQuantity = Integer.parseInt(matcher.group(1));
             String itemName = matcher.group(2);
-            double itemPrice = Double.parseDouble(matcher.group(3));
+            BigDecimal itemPrice = new BigDecimal(matcher.group(3));
             return new InputLine(itemQuantity, itemName, itemPrice);
         }
         return null;

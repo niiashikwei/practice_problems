@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Receipt {
@@ -13,23 +14,19 @@ public class Receipt {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(String.format("Output: %s\n", i+1));
         for(InputLine item : items){
-            stringBuilder.append(String.format("%s %s: %.2f\n", item.getQuantity(), item.getName(), salesTax.getPriceWithTax(item)));
+            stringBuilder.append(String.format("%s %s: %.2f\n", item.getQuantity(), item.getName(), salesTax.getShelfPrice(item)));
         }
         stringBuilder.append(String.format("Sales Taxes: %.2f\n", getSalesTaxTotal()))
-                     .append(String.format("Total: %.2f\n\n", getPricesTotal() + getSalesTaxTotal()));
+                     .append(String.format("Total: %.2f\n\n", getPricesTotal().add(getSalesTaxTotal())));
 
         return stringBuilder.toString();
     }
 
-    private double getPricesTotal() {
-        double total = 0;
-        for (InputLine item : items){
-            total += item.getPrice();
-        }
-        return total;
+    private BigDecimal getPricesTotal() {
+        return salesTax.getPriceWithTax(items);
     }
 
-    private double getSalesTaxTotal() {
-        return salesTax.getTotalSalesTax(items);
+    private BigDecimal getSalesTaxTotal() {
+        return salesTax.getSalesTax(items);
     }
 }

@@ -1,9 +1,11 @@
+import java.math.BigDecimal;
+
 public class InputLine {
     private String name;
     private int quantity;
-    private double price;
+    private BigDecimal price;
 
-    public InputLine(int quantity, String name, double itemPrice) {
+    public InputLine(int quantity, String name, BigDecimal itemPrice) {
         this.quantity = quantity;
         this.name = name;
         this.price = itemPrice;
@@ -17,7 +19,7 @@ public class InputLine {
         return quantity;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
@@ -26,24 +28,20 @@ public class InputLine {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        InputLine item = (InputLine) o;
+        InputLine inputLine = (InputLine) o;
 
-        if (Double.compare(item.price, price) != 0) return false;
-        if (quantity != item.quantity) return false;
-        if (!name.equals(item.name)) return false;
+        if (quantity != inputLine.quantity) return false;
+        if (name != null ? !name.equals(inputLine.name) : inputLine.name != null) return false;
+        if (price != null ? !price.equals(inputLine.price) : inputLine.price != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = name.hashCode();
+        int result = name != null ? name.hashCode() : 0;
         result = 31 * result + quantity;
-        temp = Double.doubleToLongBits(price);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (price != null ? price.hashCode() : 0);
         return result;
     }
-
 }

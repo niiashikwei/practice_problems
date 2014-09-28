@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static com.google.common.collect.Lists.newArrayList;
@@ -12,12 +13,12 @@ public class ReceiptTest {
     @Before
     public void setUp(){
         List<String> exemptGoods = newArrayList("book", "books", "chocolate", "chocolates", "headache pills");
-        salesTax = new SalesTax(.1, exemptGoods, .05);
+        salesTax = new SalesTax(new BigDecimal("0.1"), exemptGoods, new BigDecimal(".05"));
     }
 
     @Test
     public void shouldPrintReceiptTitleWithNumberOfInputFiles(){
-        InputLine inputLine = new InputLine(1,"hat", 100.00);
+        InputLine inputLine = new InputLine(1,"hat", new BigDecimal("100.00"));
         List<InputLine> items = newArrayList(inputLine);
         Receipt actualReceipt = new Receipt(items, salesTax);
 

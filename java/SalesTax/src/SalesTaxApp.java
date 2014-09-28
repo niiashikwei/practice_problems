@@ -1,11 +1,12 @@
 import java.io.*;
+import java.math.BigDecimal;
 import java.util.List;
 
 import static com.google.common.collect.Lists.newArrayList;
 
 public class SalesTaxApp {
-    double BASICSALESTAX = 0.1;
-    double IMPORTTAX = 0.05;
+    BigDecimal BASICSALESTAX = new BigDecimal("0.10");
+    BigDecimal IMPORTTAX = new BigDecimal("0.05");
     List<String> EXEMPTGOODS = newArrayList("book", "books", "chocolate", "chocolates", "headache pills");
     PrintStream printStream;
     SalesTax salesTax;
@@ -19,7 +20,7 @@ public class SalesTaxApp {
     public SalesTaxApp(String[] filePaths){
         this.filePaths = filePaths;
         this.printStream = System.out;
-        this. salesTax = new SalesTax(BASICSALESTAX, EXEMPTGOODS, IMPORTTAX);
+        this.salesTax = new SalesTax(BASICSALESTAX, EXEMPTGOODS, IMPORTTAX);
     }
 
     private void printOutput(){

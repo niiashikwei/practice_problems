@@ -1,45 +1,55 @@
+import java.math.BigDecimal;
 import java.util.List;
 
 public class SalesTax {
-    private double importTax;
+    private BigDecimal importTax;
     private List<String> exemptGoods;
-    private double basicSalesTax;
+    private BigDecimal basicSalesTax;
 
-    public SalesTax(double basicSalesTax, List<String> exemptGoods, double importTax){
+    public SalesTax(BigDecimal basicSalesTax, List<String> exemptGoods, BigDecimal importTax){
         this.exemptGoods = exemptGoods;
         this.basicSalesTax = basicSalesTax;
         this.importTax = importTax;
     }
 
-    public double getBasicSalesTax(InputLine inputLine){
+    public BigDecimal getBasicSalesTax(InputLine inputLine){
         for (String exemptGood : exemptGoods){
             if(inputLine.getName().contains(exemptGood)){
-                return 0.0;
+                return new BigDecimal("0.00");
             }
         }
-        return basicSalesTax * inputLine.getPrice();
+        return basicSalesTax.multiply(inputLine.getPrice());
     }
 
-    public double getImportDuty(InputLine inputLine) {
+    public BigDecimal getImportDuty(InputLine inputLine) {
         if(inputLine.getName().contains("imported")){
-            return importTax * inputLine.getPrice();
+            return importTax.multiply(inputLine.getPrice());
         }
-        return 0.0;
+        return new BigDecimal("0.00");
     }
 
-    public double getTotalSalesTax(InputLine inputLine) {
-        return getBasicSalesTax(inputLine) + getImportDuty(inputLine);
+    public BigDecimal getSalesTax(InputLine inputLine) {
+        return getBasicSalesTax(inputLine).add(getImportDuty(inputLine));
     }
 
-    public double getTotalSalesTax(List<InputLine> items) {
-        double salesTax = 0;
+    public BigDecimal getSalesTax(List<InputLine> items) {
+        BigDecimal salesTax = new BigDecimal("0.00");
         for (InputLine item : items){
-            salesTax += getTotalSalesTax(item);
+            salesTax = salesTax.add(getSalesTax(item));
         }
         return salesTax;
     }
 
-    public double getPriceWithTax(InputLine item) {
-        return item.getPrice() + getTotalSalesTax(item);
+    public BigDecimal getShelfPrice(InputLine item) {
+        BigDecimal salesTax = getSalesTax(item);
+        return item.getPrice().add(salesTax);
+    }
+
+    public BigDecimal getPriceWithTax(List<InputLine> items) {
+        BigDecimal total = new BigDecimal("0.00");
+        for (InputLine item : items){
+            total = total.add(item.getPrice());
+        }
+        return total;
     }
 }
